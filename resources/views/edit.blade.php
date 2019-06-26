@@ -23,9 +23,8 @@
         <div class="uk-container uk-card uk-card-default" style="padding: 15px; border-radius:4px;">
             <div class="uk-card-title">
             </div>
-            <form method="POST" action="/projects" style="padding:15px;" enctype="multipart/form-data">
-                @csrf
-                @method('POST')
+            <form method="POST" action="/projects/{{$project->id}}/update" style="padding:15px;" enctype="multipart/form-data">
+                {{ csrf_field() }}
                 
                 <label for="title" style="font-weight: 100;"><b>Project titel</b></label>
                 <input style="font-size: 16px; border-radius:5px;" type="text" class="uk-input" name="title" value="{{ $project->title }}"><br><br>

@@ -56,8 +56,7 @@ class ProjectsController extends Controller
     {
         $project->update($request->all());
 
-        return redirect('projects/' . $project->id);
-
+        return redirect('projects');
     }
 
     public function destroy(Request $request, Project $project)
