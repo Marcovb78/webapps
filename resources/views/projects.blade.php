@@ -20,9 +20,9 @@
                 <div class="uk-card uk-card-default uk-card-hover m-3" style="margin-top: 30px; width:300px;">
                         <div class="uk-card-header">
                             <h1 class="uk-card-title">{{ $project->title }}</h1>
+                            <div class="uk-card-badge uk-label">{{ $project->user->name }}</div>
                         </div>
                         <div class="uk-card-body">
-                            <div class="uk-card-badge uk-label">{{ $project->user->name }}</div>
                             <p style="color: #000;">{{ $project->description }}</p>
                         </div>
                         <div class="uk-card-footer">
