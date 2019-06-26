@@ -13,6 +13,8 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    // Haal alle categories op
     public function index()
     {
         $categories = Category::all();
@@ -25,6 +27,8 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     // Laat alle projecten zien met de category_id
     public function showCategory(Category $category)
     {   
         $categories = Category::all();
