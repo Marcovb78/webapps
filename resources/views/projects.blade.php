@@ -18,7 +18,7 @@
             <div class="d-flex justify-content-center flex-wrap p-5">
                 @foreach ($projects as $project)
                 <a href="projects/{{$project->id}}">
-                    <div class="uk-card uk-card-default uk-card-hover m-3" style="margin-top: 30px; width:300px;">
+                    <div class="uk-card uk-card-default uk-card-hover m-3" style="margin-top: 30px; width:400px;">
                         <div class="uk-card-header">
                             <h1 class="uk-card-title">{{ $project->title }}</h1>
                         </div>
@@ -37,4 +37,18 @@
         </div>
     </div>
 
+    <script>
+        var rezise = true;
+        $(".sidebar-open").click(function(){
+            $(".sidebar").css("width","400px");
+        });
+        $(".sidebar-close").click(function(){
+            $(".sidebar").css("width","0px");
+        });
+
+        window.onresize = function() {
+            if (window.innerWidth >= 920) {  $(".sidebar").css("width","200px"); rezise = true;}
+            if (window.innerWidth <= 920 && rezise) {  $(".sidebar").css("width","0px"); rezise = false;}
+        }
+    </script>
     @endsection
