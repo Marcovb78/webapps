@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 Use App\Models\Category;
-Use App\Models\Video;
+Use App\Models\Project;
 
 class CategoryController extends Controller
 {
@@ -28,9 +28,9 @@ class CategoryController extends Controller
     public function showCategory(Category $category)
     {   
         $categories = Category::all();
-        $videos = Video::where('category_id', $category->id)->get();
+        $projects = Project::where('category_id', $category->id)->get();
         
-        return view('category', compact('categories', 'videos'));
+        return view('category', compact('categories', 'projects'));
     }
 
     /**
