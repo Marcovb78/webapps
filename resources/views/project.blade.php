@@ -4,7 +4,8 @@
 
 
     {{-- Marco zijn shit --}}
-    @guest
+
+    {{-- @guest
     <header class="masthead" style="height: 40vh;">
         @include('navbar')
         <div class="container d-flex justify-content-center flex-column text-center text-light">
@@ -46,10 +47,33 @@
                 </div>
             </div>
         </div>
-    @endauth
+    @endauth --}}
 
     {{-- Mijn shit --}}
 
-
+    <header class="masthead" style="height: 20vh; max-height:250px;">
+        @include('navbar')
+        <div class="container d-flex justify-content-center flex-column text-center text-light">
+            <div class="test">
+                <span style="font-size:60px;">{{ $project->title }}</span>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="card text-center">
+            <div class="card-header">
+                Project
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ $project->title }}</h5>
+              <p class="card-text">{{ $project->description }}</p>
+              <a href="{{ url('projects/'.$project->id .'/edit' )}}" class="btn btn-primary">Edit</a>
+              <a href="{{ url('projects/'.$project->id .'/destroy' )}}" class="btn btn-danger">Delete</a>
+            </div>
+            <div class="card-footer text-muted">
+                {{ $project->created_at }}
+            </div>
+          </div>
+    </div>
 
 @endsection
