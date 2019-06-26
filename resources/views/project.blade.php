@@ -60,7 +60,7 @@
         </div>
     </header>
     <div class="container">
-        <div class="card text-center">
+        <div class="card text-center mt-5">
             <div class="card-header">
                 Project
             </div>
