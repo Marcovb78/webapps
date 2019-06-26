@@ -23,6 +23,8 @@ Route::resource('projects', 'ProjectsController');
 Route::get('/projects/create', 'ProjectsController@create')->name('projectCreate');
 Route::get('/projects/{project}', 'ProjectsController@show')->name('projectShow');
 Route::get('/projects/{project}/edit', 'ProjectsController@edit')->name('projectEdit');
+Route::post('/projects/{project}/update', 'ProjectsController@update')->name('projectUpdate');
+Route::get('/projects/{project}/destroy', 'ProjectsController@destroy')->name('projectDestroy');
 
 Route::get('/categories', 'CategoryController@index')->name('projectCategories');
 Route::get('/category/{category}', 'CategoryController@showCategory')->name('projectCategory');

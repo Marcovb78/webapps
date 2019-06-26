@@ -19,7 +19,7 @@
                     @foreach ($projects as $project)
                         <a href="{{ url('projects/' . $project->id )}}" style="text-decoration: none;">
                             <div class="col-md-6">
-                                <div class="uk-card uk-card-default uk-card-hover" style="margin-top: 30px;">
+                                <div class="uk-card uk-card-default uk-card-hover" style="margin-top: 30px; width:500px;">
                                     <div class="uk-card-header">
                                         <h1 class="uk-card-title">{{ $project->title }}</h1>
                                     </div>
