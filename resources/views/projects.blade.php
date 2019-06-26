@@ -30,7 +30,8 @@
                                     <div class="uk-card-footer">
                                         <span style="float:right; color: #000;">{{ $project->created_at }}</span>
                                     </div>
-                                    <a href="{{ url('projects/'.$project->id .'/edit' )}}"><button type="button" class="btn btn-secondary" style="margin: 0 0 15px 15px;">Edit je project</button></a>
+                                    <!-- Dit is een feature! -->
+                                    <a href="{{ url('projects/'.$project->id .'/edit' )}}"><button type="button" class="uk-button uk-button-secondary" style="margin: 0 0 15px 15px;">Edit {{ $project->user->name }}'s project</button></a>
                                 </div>
                             </div>
                         </a>

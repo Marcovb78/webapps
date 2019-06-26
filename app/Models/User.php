@@ -42,6 +42,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    // Een user heeft meerdere projecten
     public function projects()
     {
         return $this->hasMany(Project::class);
