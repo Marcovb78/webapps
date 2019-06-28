@@ -72,7 +72,7 @@ body {
   line-height: 1.6;
   color: #212529;
   text-align: left;
-  background-color: #f8fafc;
+  background-color: grey!important;
 }
 
 [tabindex="-1"]:focus {
@@ -10644,10 +10644,6 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
-}
-
-body {
-  background-color: transparent;
 }
 
 .navbar-laravel {

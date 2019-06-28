@@ -8,7 +8,7 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
-    background-color: transparent;
+    background-color: grey;
 }
 
 .navbar-laravel {
@@ -238,6 +238,14 @@ hr {
         background-size: cover;
         height: 100%;
         width: 100%;
+        background-image: url('../../public/img/test1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background:
+        linear-gradient(rgba(76, 71, 90, 0.85),
+            rgba(76, 71, 90, 0.8)),
+        url('../../public/img/test1.jpg');  
     }
 
     >.text {
